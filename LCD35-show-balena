@@ -1,0 +1,12 @@
+#!/bin/bash
+rm -rf /etc/X11/xorg.conf.d/40-libinput.conf
+mkdir /etc/X11/xorg.conf.d
+cp ./usr/tft35a-overlay.dtb /boot/overlays/
+cp ./usr/tft35a-overlay.dtb /boot/overlays/tft35a.dtbo
+cp -rf ./usr/99-calibration.conf-35  /etc/X11/xorg.conf.d/99-calibration.conf
+cp -rf ./usr/99-fbturbo.conf  /usr/share/X11/xorg.conf.d/
+cp ./usr/cmdline.txt-noobs /boot/cmdline.txt
+cp ./usr/cmdline.txt /boot/
+cp ./usr/inittab /etc/
+cp ./boot/config-35.txt /boot/config.txt
+cp -rf /usr/share/X11/xorg.conf.d/10-evdev.conf /usr/share/X11/xorg.conf.d/45-evdev.conf
